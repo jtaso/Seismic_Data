@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <title>Earthquake App</title>
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="css/main.css">
+      <script src="https://maps.googleapis.com/maps/api/js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      <script src="js/earthquake.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Check Earthquakes</h1>
+      <form action="action_page.php">
+        Start Date: <input type="date" id="startDate" name="startDate">
+        End Date: <input type="date" id="endDate" name="endDate">
+        <button id='getGeoData' class="btn" type='button'>Get Seismic Data</button>
+      </form>
+      <center><span id='loading'>Contacting USGS for Data...</span><div id="map"></div></center>
+      <ul id='display' class="list-group"></ul>
+    </div>
+  </body>
+</html>
